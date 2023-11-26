@@ -1,0 +1,119 @@
+/*
+Copyright amir javanmir
+Released on: november 27, 2023
+*/
+@font-face {
+    font-family: "yekan";
+    src: url(../fonts/yekan.eot);
+    src: url(../fonts/yekan.eot?#iefix) format("embedded-opentype"), url(../fonts/yekan.ttf) format("truetype"), url(../fonts/yekan.woff) format("woff");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+body {
+    direction: ltr;
+    font-family: "yekan";
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    background-color: #311b92;
+}
+
+header h2 {
+    color: white;
+    font-size: 28px;
+}
+
+.content {
+    max-width: 1140px;
+    width: 100%;
+    margin: auto;
+    padding: 2rem 0;
+    font-size: 1.2rem;
+}
+
+.sidebar {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: #210e75;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: -200px;
+    transition: left ease-in-out 0.5s;
+}
+
+.sidebar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    margin: 2rem auto;
+    flex-shrink: 0;
+}
+
+.sidebar ul {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.sidebar ul li {
+    list-style: none;
+    color: white;
+    padding: 1rem;
+    border-bottom: 1px solid #6146da;
+    transition: all ease 0.5s;
+}
+
+.sidebar ul li a {
+    color: white;
+    font-size: 1.3rem;
+    display: block;
+}
+
+.sidebar ul li:hover {
+    padding-left: 1.5rem;
+}
+
+.sidebar .btn {
+    width: 50px;
+    height: 50px;
+    background-color: #210e75;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    transform: translateX(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sidebar .btn:after {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    transform: translateX(-5px) rotate(135deg);
+}
+
+.sidebar.active {
+    left: 0;
+}
